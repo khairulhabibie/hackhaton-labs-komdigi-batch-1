@@ -1,0 +1,54 @@
+Anda akan mendapatkan dua soal selama hackathon ini, soal kedua akan bisa didapatkan mulai tanggal 26 Oktober jam 10.00 WIB. Berikut adalah detail untuk soal yang pertama.
+
+Extract file zip yang terlampir pada email ini. Setelah ekstrak, terdapat file penjualan_dqmart_01.xlsx yang memiliki sheet 'transaksi' dengan kolom kode transaksi, tanggal transaksi, urutan, kode produk, nama produk, qty, harga, diskon, dan total harga.
+
+Perhatikan variasi penulisan tanggal yang tidak seragam, sebagai contoh data untuk tanggal 22 Maret 2025 bisa ditulis sebagai:
+
+22 March ‘25
+22 March 2025
+2025-03-22
+dstnya
+
+Buatlah Python script dengan nama 'date_standardization.py' dimana di dalamnya terdapat definisi fungsi 'normalize_tanggal_transaksi' sebagai berikut:
+
+def normalize_tanggal_transaksi(input_xlsx_path: str, output_xlsx_path: str) -> None:
+
+Fungsi ini akan membaca file Excel yang diberikan, kemudian menuliskan file Excel output dengan jumlah dan nama kolom yang sama. Urutan kolom tidak boleh diubah. Library bukan bawaan Python yang boleh digunakan hanya Pandas.
+
+Transformasi yang harus dilakukan terhadap file data tersebut, adalah melakukan standarisasi penulisan tanggal sehingga menjadi seragam menjadi dd-MM-yyyy. 
+
+Sebagai contoh:
+untuk seluruh variasi data contoh untuk tanggal 22 Maret 2025 maka akan distandarisasi menjadi 22-03-2025. 
+untuk seluruh variasi data contoh untuk tanggal 4 April 2025 maka akan distandarisasi menjadi 04-04-2025. 
+untuk seluruh variasi data contoh untuk tanggal 13 Juli 2025 maka akan distandarisasi menjadi 13-07-2025. 
+dstnya
+
+Dari data contoh yang diberikan, maka transformasi yang harus terjadi adalah sebagai berikut:
+
+17 Desember 2024	->	17-12-2024
+7 August 2024	->	07-08-2024
+15 Sep 2024	->	15-09-2024
+25 Juni '24	->	25-06-2024
+20 Okt 2024	->	20-10-2024
+2024, 6 Nov	->	06-11-2024
+2 June 2024	->	02-06-2024
+20 Mar 2024	->	20-03-2024
+31 Oktober '24	->	31-10-2024
+22 Agustus '24	->	22-08-2024
+2024, 27 Aug	->	27-08-2024
+2024, 3 Oct	->	03-10-2024
+2024, 22 Mei	->	22-05-2024
+8 June 2024	->	08-06-2024
+5 Jul 2024	->	05-07-2024
+
+Namun tidak tertutup kemungkinan pada data sebenarnya yang akan diuji pada sistem terdapat format lain, jadi Anda harus mempertimbangkan untuk memasukkan penanganan format lain yang dapat Anda bayangkan ketika score Anda tidak mencapai 100.
+
+Kembali script yang dibuat adalah file Python dengan nama 'date_standardization.py' dan submit sebagai attachment email ke tugastest@ujikompetensi.comdengan subjek 
+
+Solusi Hackathon untuk soal 'PRAHACKATHON-01'
+
+Submission ditunggu sampai dengan tanggal 14 November pukul 10:00 WIB. Scoring akan dimulai pada tanggal 14 November 2025 pukul 11:00 WIB. Hasil akhir akan diberikan selambat-lambatnya tanggal 14 November pukul 21:00 WIB.
+
+Scoring akan dilakukan dengan berbagai file, dan akan berdasarkan jumlah yang berhasil distandarisasi dari setiap file. Sebagai contoh, jika temuan benar terhadap 70% data yang seharusnya ditemukan, maka skor adalah 70. Skor maksimal adalah 100.
+
+Dan untuk soal ini, scoring tidak memperhitungkan waktu, tapi lebih ke akurasi penemuan. Jika di-submit lebih belakangan atau dekat deadline tidak akan mengurangi bobot skor.
